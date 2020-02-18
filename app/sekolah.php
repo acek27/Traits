@@ -11,4 +11,8 @@ class sekolah extends Model
         'nama_sekolah', 'akreditasi'
     ];
     public $timestamps = false;
+    public function biodata()
+    {
+        return $this->hasMany(biodata::class);
+    }
 }

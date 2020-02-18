@@ -28,7 +28,7 @@ class AuthServiceProvider extends ServiceProvider
         $roles = Role::all();
         foreach ($roles as $role) {
             Gate::define($role->role_name, function ($user) use ($role) {
-                return $user->role_id == $role->role_id;
+                return $user->role_id == $role->id;
             });
         }
     }

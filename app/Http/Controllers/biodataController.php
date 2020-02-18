@@ -15,6 +15,6 @@ class biodataController extends Controller
 
     public function __construct()
     {
-        $this->middleware("can:user");
+        $this->middleware("can:admin");
     }
 }

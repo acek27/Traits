@@ -13,7 +13,7 @@ trait Resource
      */
     public function index()
     {
-        dd($this->model::query());
+        return view($this->view . '.index');
     }
 
     /**
@@ -23,7 +23,7 @@ trait Resource
      */
     public function create()
     {
-        return view($this->view);
+        return view($this->view . '.create');
     }
 
     /**
